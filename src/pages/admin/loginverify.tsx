@@ -1,11 +1,10 @@
 // src/pages/VerifyLogin.jsx
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router';
 const VerifyLogin = () => {
   const [tokenCode, setTokenCode] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [resendAvailable, setResendAvailable] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
@@ -27,7 +26,6 @@ const VerifyLogin = () => {
         if (!response.ok) {
           throw new Error(data.message || 'Failed to resend code');
         }
-        setResendAvailable(false);
         localStorage.setItem('admintoken', data.loginToken);
         alert(data.message)
         navigate("/")
