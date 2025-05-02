@@ -53,7 +53,15 @@ export const adminApiSlice = createApi({
       }),
       invalidatesTags: ['BlogPost'],
     }),
-
+    
+updateBlogPost: builder.mutation<BlogPost, { id: any; data: FormData }>({
+  query: ({ id, data }) => ({
+    url: `/blog/${id}`,
+    method: 'PUT',
+    body: data,
+  }),
+  invalidatesTags: ['BlogPost'],
+}),
     // About Us Banner Endpoint
     updateAboutUsBanner: builder.mutation<AboutUsBanner, FormData>({
       query: (formData) => ({
@@ -69,5 +77,6 @@ export const adminApiSlice = createApi({
 // Export hooks for usage in components
 export const { 
   useCreateBlogPostMutation,
+  useUpdateBlogPostMutation,
   useUpdateAboutUsBannerMutation 
 } = adminApiSlice;
