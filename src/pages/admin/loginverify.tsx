@@ -28,7 +28,7 @@ const VerifyLogin = () => {
         }
         localStorage.setItem('admintoken', data.loginToken);
         alert(data.message)
-        navigate("/")
+        navigate("/admin/dashboard")
         return data;
       } catch (err:any) {
         setError(err.message);

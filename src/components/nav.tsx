@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { Menu, X } from "lucide-react"; // Icon for toggle button
-import { useLanguageStore } from "../Zustand_Store/languagestore.ts";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const {language,toggleLanguage} = useLanguageStore()
-
   return (
     <div className="container px-5 md:px-1 bg-yellow-400 mx-auto py-3">
       <nav className="flex justify-between items-center">
@@ -41,7 +39,7 @@ const Navbar = () => {
           <Link to="/contact" className="block md:inline p-2 md:p-0">
             Contact
           </Link>
-          <button onClick={toggleLanguage} className="text-white"> {language === 'en' ? 'မြန်မာ' : 'English'}</button>
+          <button className="text-white">Language</button>
         </div>
       </nav>
     </div>
