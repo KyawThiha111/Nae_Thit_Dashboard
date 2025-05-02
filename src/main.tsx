@@ -8,7 +8,6 @@ import HomePage from "./pages/publicpages/Home.tsx";
 import Login from "./pages/admin/login.tsx";
 import VerifyLogin from "./pages/admin/loginverify.tsx";
 import Dashboard from "./pages/admin/Dashboard.tsx";
-import CreateBlog from "./components/admin/Blogs/addblog.tsx";
 import UpdateBlogPost from "./components/admin/Blogs/updateBlog.tsx";
 import Aboutus from "./pages/admin/Aboutus/Aboutus.tsx";
 import AdminBlog from "./pages/admin/Blogs/adminBlog.tsx";

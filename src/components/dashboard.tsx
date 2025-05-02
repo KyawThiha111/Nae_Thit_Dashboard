@@ -1,5 +1,4 @@
 import { Link } from 'react-router';
-import { Outlet } from 'react-router';
 const AdminDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-50">

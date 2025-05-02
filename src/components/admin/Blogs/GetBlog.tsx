@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 
 const BLOG_API =
   "https://naethitasanv2.onrender.com/api/pages/bloggetallupdate";
-const Delete_API = "https://naethitasanv2.onrender.com/api/pages/blog"; //add id
+const DELETE_API = "https://naethitasanv2.onrender.com/api/pages/blog"; //add id
 interface Blog {
   id: string;
   titleen: string;
@@ -43,8 +43,6 @@ const BlogCards = () => {
   /* Delete */
   const DeleteBlog = async (id: string) => {
     // Set your API endpoint - replace with your actual delete endpoint
-    const DELETE_API = "https://naethitasanv2.onrender.com/api/pages/blog";
-
     try {
       const response = await fetch(`${DELETE_API}/${id}`, {
         method: "DELETE",
