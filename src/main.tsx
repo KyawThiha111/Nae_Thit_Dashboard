@@ -4,14 +4,14 @@ import "./index.css";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 /* Pages */
-import HomePage from "./pages/publicpages/Home.tsx";
-import Login from "./pages/admin/login.tsx";
-import VerifyLogin from "./pages/admin/loginverify.tsx";
-import Dashboard from "./pages/admin/Dashboard.tsx";
-import UpdateBlogPost from "./components/admin/Blogs/updateBlog.tsx";
-import Aboutus from "./pages/admin/Aboutus/Aboutus.tsx";
-import AdminBlog from "./pages/admin/Blogs/adminBlog.tsx";
-import DashboardNav from "./components/admin/dashboardnav.tsx";
+import HomePage from "./pages/publicpages/Home";
+import Login from "./pages/admin/login";
+import VerifyLogin from "./pages/admin/loginverify";
+import Dashboard from "./pages/admin/Dashboard";
+import UpdateBlogPost from "./components/admin/Blogs/updateBlog";
+import Aboutus from "./pages/admin/Aboutus/Aboutus";
+import AdminBlog from "./pages/admin/Blogs/adminBlog";
+import DashboardNav from "./components/admin/dashboardnav";
 import { store } from "./stores/naethitStore.ts";
 import { Provider } from "react-redux";
 const router = createBrowserRouter([
