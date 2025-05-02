@@ -39,7 +39,9 @@ const Navbar = () => {
           <Link to="/contact" className="block md:inline p-2 md:p-0">
             Contact
           </Link>
-          <button className="text-white">Language</button>
+          <button className="text-white">
+            <Link to="/admin/login">Admin</Link>
+          </button>
         </div>
       </nav>
     </div>
